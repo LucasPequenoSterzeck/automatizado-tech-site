@@ -1,0 +1,105 @@
+/*!
+ * AOS - Animate On Scroll Library
+ * Version: 2.3.4
+ * Author: Michal Szymanski
+ * URL: https://michalsnik.github.io/aos/
+ */
+
+/* =======================
+   CONFIGURAÇÕES BASE
+======================= */
+
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
+  will-change: transform, opacity;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: none;
+}
+
+/* =======================
+   ANIMAÇÕES PADRÃO
+======================= */
+
+/* Fade */
+[data-aos="fade"] {
+  transform: translateZ(0);
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(40px);
+}
+
+[data-aos="fade-down"] {
+  transform: translateY(-40px);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(40px);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-40px);
+}
+
+/* Zoom */
+[data-aos="zoom-in"] {
+  transform: scale(0.95);
+}
+
+[data-aos="zoom-out"] {
+  transform: scale(1.05);
+}
+
+/* Flip */
+[data-aos="flip-left"] {
+  transform: rotateY(-100deg);
+  transform-origin: left center;
+}
+
+[data-aos="flip-right"] {
+  transform: rotateY(100deg);
+  transform-origin: right center;
+}
+
+/* =======================
+   AO ENTRAR NA TELA
+======================= */
+[data-aos].aos-animate[data-aos="fade-up"],
+[data-aos].aos-animate[data-aos="fade-down"],
+[data-aos].aos-animate[data-aos="fade-left"],
+[data-aos].aos-animate[data-aos="fade-right"],
+[data-aos].aos-animate[data-aos="zoom-in"],
+[data-aos].aos-animate[data-aos="zoom-out"],
+[data-aos].aos-animate[data-aos="flip-left"],
+[data-aos].aos-animate[data-aos="flip-right"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* =======================
+   DELAY PERSONALIZADO
+======================= */
+[data-aos][data-aos-delay] {
+  transition-delay: var(--aos-delay, 0s);
+}
+
+/* =======================
+   UTILIDADES
+======================= */
+html[data-aos-easing="ease-out-back"] [data-aos] {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+html[data-aos-easing="ease-in-sine"] [data-aos] {
+  transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+html[data-aos-easing="ease-in-out-quad"] [data-aos] {
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}

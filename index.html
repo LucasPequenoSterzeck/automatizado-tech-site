@@ -1,45 +1,143 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Automatizado Tech | Faça MAIS com Menos</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="assets/img/logo_principal.png" alt="Logo Automatizado Tech">
-      <h1>AUTOMATIZADO TECH</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Início</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-        <li><a href="cursos.html">Cursos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Automatizado Tech | Faça MAIS com Menos</title>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Automatize<br>Escale<br>Simplifique</h2>
-      <p>Criação de automatizações e soluções inteligentes para aumentar sua produtividade.</p>
-      <a href="servicos.html" class="cta">Conheça nossos serviços</a>
-    </div>
-    <div class="hero-banner">
-      <img src="assets/img/logo_principal_semFundo.png" alt="Banner Automatizado Tech" />
-    </div>
-  </section>
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <section class="slogan">
-    <h3>FAÇA MAIS COM MENOS</h3>
-  </section>
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-  <footer>
-    <p>&copy; 2025 Automatizado Tech — Todos os direitos reservados.</p>
-  </footer>
-</body>
-</html>
+    <!-- Biblioteca AOS -->
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
+  </head>
+  <body>
+
+    <!-- Header / Nav -->
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a href="#home" class="logo" aria-label="Ir ao topo">
+          <img src="assets/img/logo_principal_semFundo.png" alt="Logo Automatizado Tech" />
+          <span class="brand">AUTOMATIZADO TECH</span>
+        </a>
+
+        <nav aria-label="Navegação primária">
+          <ul class="nav" id="mainNav">
+            <li><a href="#home" class="is-active">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfox-b6sLG6V97SUjBpQ-urTBNT-RadySHMytRGYbq_XVhQ0g/viewform?usp=dialog" class="cta-small">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section id="home">
+      <div class="container hero">
+        <div data-aos="fade-up">
+          <span class="pill">Faça MAIS com Menos</span>
+          <h1>Automatize. <br>Escale. <br>Simplifique.</h1>
+          <p>Criação de automações Web e soluções inteligentes para aumentar sua produtividade e reduzir custos.</p>
+          <div class="buttons">
+            <a href="#servicos" class="btn btn-primary">Conheça nossos serviços</a>
+            <a href="#cursos" class="btn">Ver cursos</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-aos="zoom-in" data-aos-delay="80">
+          <img class="parallax" data-parallax data-parallax-speed="0.35"
+              src="assets/img/hero_banner.png" alt="Banner Automatizado Tech">
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Sobre</h2>
+        <p class="section-sub" data-aos="fade-up" data-aos-delay="60">
+          Construímos automações sob medida, integrações entre sistemas, e rotinas inteligentes para times que precisam fazer mais com menos.
+        </p>
+
+        <div class="grid grid-3">
+          <div class="card" data-aos="fade-up">
+            <img src="assets/img/sobre_1.jpg" alt="Automação de processos">
+            <h3>Automação de Processos</h3>
+            <p>Elimine tarefas repetitivas com robôs (RPA) e scripts robustos.</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="80">
+            <img src="assets/img/sobre_2.jpg" alt="Integrações">
+            <h3>Integrações</h3>
+            <p>Conecte ERPs, CRMs e planilhas ao seu fluxo real de trabalho.</p>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="140">
+            <img src="assets/img/sobre_3.jpg" alt="Dados e insights">
+            <h3>Dados &amp; Insights</h3>
+            <p>Dashboards, ETL e tomadas de decisão baseadas em dados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURSOS -->
+    <section id="cursos">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Cursos</h2>
+        <p class="section-sub" data-aos="fade-up" data-aos-delay="60">
+          Formação prática para você dominar automação, dados e produtividade real.
+        </p>
+
+        <div class="grid grid-3">
+
+          <div class="card" data-aos="fade-up">
+            <img src="assets/img/curso_1.jpg" alt="Curso de RPA">
+            <h3>RPA na Prática</h3>
+            <p>Automatize tarefas na web do zero ao avançado.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Contato</h2>
+        <p class="section-sub" data-aos="fade-up" data-aos-delay="60">
+          Fale com a gente e conte seu desafio.
+        </p>
+
+        <!-- Botão alternativo (abre o formulário em nova aba) -->
+        <p data-aos="fade-up" data-aos-delay="120">
+          <a class="btn btn-primary" rel="noopener" target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfox-b6sLG6V97SUjBpQ-urTBNT-RadySHMytRGYbq_XVhQ0g/viewform?usp=dialog">
+            Abrir formulário
+          </a>
+        </p>
+
+        <!-- Embed do Form (recomendado usar o modo embedded do Google Forms) -->
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <small>&copy; 2025 Automatizado Tech — Todos os direitos reservados.</small>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+        easing: 'ease-out'
+      });
+    </script>
+  </body>
+  </html>
