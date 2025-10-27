@@ -7,12 +7,14 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- AOS (CSS oficial via CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+
   <style>
-    /* ===== VARIÁVEIS DE TEMA ===== */
     :root {
       --bg: #0f0f12;
       --bg-soft: #141419;
-      --fg: #030303;
+      --fg: #ffffff;
       --muted: #c0c2b8;
       --brand: #ff6a00;
       --accent: #787880;
@@ -30,14 +32,14 @@
       overflow-x: hidden;
     }
 
-    /* ===== HEADER ===== */
+    /* ===== HEADER ESCURA ===== */
     .site-header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: #fff;
-      border-bottom: 1px solid #e4e4e4;
-      box-shadow: 0 2px 8px rgba(0,0,0,.05);
+      background: #0f0f12;
+      border-bottom: 1px solid #1a1a22;
+      box-shadow: 0 4px 14px rgba(0,0,0,.45);
     }
 
     .nav-wrap {
@@ -54,7 +56,7 @@
       align-items: center;
       gap: 10px;
       text-decoration: none;
-      color: var(--fg);
+      color: #fff;
     }
 
     .logo img {
@@ -69,9 +71,7 @@
       font-size: 14px;
     }
 
-    nav {
-      margin-left: auto;
-    }
+    nav { margin-left: auto; }
 
     .nav {
       list-style: none;
@@ -84,7 +84,7 @@
       padding: 10px 14px;
       border-radius: 10px;
       font-weight: 600;
-      color: var(--fg);
+      color: #eaeaea;
       font-size: 14px;
       transition: all .2s ease;
     }
@@ -92,7 +92,7 @@
     .nav a:hover,
     .nav a.is-active {
       background: var(--brand);
-      color: #fff;
+      color: #0f0f12;
     }
 
     .cta-small {
@@ -101,20 +101,11 @@
     }
 
     /* ===== SEÇÕES ===== */
-    section {
-      padding: var(--section-gap) var(--pad);
-    }
-
-    .container {
-      max-width: var(--maxw);
-      margin: 0 auto;
-    }
+    section { padding: var(--section-gap) var(--pad); }
+    .container { max-width: var(--maxw); margin: 0 auto; }
 
     /* ===== HERO ===== */
-    #home {
-      padding-top: calc(var(--section-gap) + 30px);
-    }
-
+    #home { padding-top: calc(var(--section-gap) + 30px); }
     .hero {
       display: grid;
       grid-template-columns: 1.2fr .8fr;
@@ -169,9 +160,7 @@
       border-color: transparent;
     }
 
-    .btn:hover {
-      filter: brightness(1.05);
-    }
+    .btn:hover { filter: brightness(1.05); }
 
     .hero-visual {
       position: relative;
@@ -189,14 +178,8 @@
     }
 
     /* ===== CARDS ===== */
-    .grid {
-      display: grid;
-      gap: 16px;
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
+    .grid { display: grid; gap: 16px; }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 
     .card {
       background: var(--bg-soft);
@@ -208,9 +191,7 @@
       transition: transform .2s ease;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
+    .card:hover { transform: translateY(-4px); }
 
     .card img {
       width: 100%;
@@ -231,7 +212,6 @@
       color: var(--muted);
     }
 
-    /* ===== SEÇÃO TÍTULOS ===== */
     .section-title {
       font-size: clamp(28px, 4.2vw, 44px);
       margin-bottom: 8px;
@@ -243,7 +223,6 @@
       margin-bottom: 24px;
     }
 
-    /* ===== FOOTER ===== */
     footer {
       border-top: 1px solid #1d1d24;
       padding: 28px var(--pad);
@@ -252,24 +231,19 @@
       background: #0d0d11;
     }
 
-    /* ===== RESPONSIVO ===== */
     @media (max-width: 960px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
+      .hero { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header / Nav -->
-  <header class="site-header">
+  <header class="site-header" data-aos="fade-down" data-aos-duration="600">
     <div class="nav-wrap">
       <a href="#home" class="logo" aria-label="Ir ao topo">
         <img src="assets/img/logo_principal_semFundo.png" alt="Logo Automatizado Tech" />
         <span class="brand">AUTOMATIZADO TECH</span>
       </a>
-
       <nav aria-label="Navegação primária">
         <ul class="nav" id="mainNav">
           <li><a href="#home" class="is-active">Início</a></li>
@@ -284,16 +258,16 @@
   <!-- HOME -->
   <section id="home">
     <div class="container hero">
-      <div>
+      <div data-aos="fade-up" data-aos-duration="700">
         <span class="pill">Faça MAIS com Menos</span>
         <h1>Automatize. <br>Escale. <br>Simplifique.</h1>
         <p>Criação de automações Web e soluções inteligentes para aumentar sua produtividade e reduzir custos.</p>
-        <div class="buttons">
+        <div class="buttons" data-aos="fade-up" data-aos-delay="120">
           <a href="#sobre" class="btn btn-primary">Conheça nossos serviços</a>
           <a href="#cursos" class="btn">Ver cursos</a>
         </div>
       </div>
-      <div class="hero-visual">
+      <div class="hero-visual" data-aos="zoom-in" data-aos-delay="80">
         <img src="assets/img/hero_banner.png" alt="Banner Automatizado Tech">
       </div>
     </div>
@@ -302,22 +276,22 @@
   <!-- SOBRE -->
   <section id="sobre">
     <div class="container">
-      <h2 class="section-title">Sobre</h2>
-      <p class="section-sub">
+      <h2 class="section-title" data-aos="fade-up">Sobre</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="60">
         Construímos automações sob medida, integrações entre sistemas e rotinas inteligentes para times que precisam fazer mais com menos.
       </p>
       <div class="grid grid-3">
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <img src="assets/img/sobre_1.jpg" alt="Automação de processos">
           <h3>Automação de Processos</h3>
           <p>Elimine tarefas repetitivas com robôs (RPA) e scripts robustos.</p>
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="80">
           <img src="assets/img/sobre_2.jpg" alt="Integrações">
           <h3>Integrações</h3>
           <p>Conecte ERPs, CRMs e planilhas ao seu fluxo real de trabalho.</p>
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="140">
           <img src="assets/img/sobre_3.jpg" alt="Dados e insights">
           <h3>Dados &amp; Insights</h3>
           <p>Dashboards, ETL e tomadas de decisão baseadas em dados.</p>
@@ -329,12 +303,12 @@
   <!-- CURSOS -->
   <section id="cursos">
     <div class="container">
-      <h2 class="section-title">Cursos</h2>
-      <p class="section-sub">
+      <h2 class="section-title" data-aos="fade-up">Cursos</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="60">
         Formação prática para você dominar automação, dados e produtividade real.
       </p>
       <div class="grid grid-3">
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <img src="assets/img/curso_1.jpg" alt="Curso de RPA">
           <h3>RPA na Prática</h3>
           <p>Automatize tarefas na web do zero ao avançado.</p>
@@ -346,11 +320,11 @@
   <!-- CONTATO -->
   <section id="contato">
     <div class="container">
-      <h2 class="section-title">Contato</h2>
-      <p class="section-sub">Fale com a gente e conte seu desafio.</p>
-      <p>
+      <h2 class="section-title" data-aos="fade-up">Contato</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="60">Fale com a gente e conte seu desafio.</p>
+      <p data-aos="fade-up" data-aos-delay="120">
         <a class="btn btn-primary" rel="noopener" target="_blank"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfox-b6sLG6V97SUjBpQ-urTBNT-RadySHMytRGYbq_XVhQ0g/viewform?usp=dialog">
+           href="https://docs.google.com/forms/d/e/1FAIpQLSfox-b6sLG6V97SUjBpQ-urTBNT-RadySHMytRGYbq_XVhQ0g/viewform?usp=dialog">
           Abrir formulário
         </a>
       </p>
@@ -361,26 +335,15 @@
     <small>&copy; 2025 Automatizado Tech — Todos os direitos reservados.</small>
   </footer>
 
-  <!-- JS Inline -->
+  <!-- AOS (JS oficial via CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    // Simulação simples do efeito AOS (já que não estamos importando a lib)
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('[data-aos]').forEach(el => {
-        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              el.style.opacity = '1';
-              el.style.transform = 'translateY(0)';
-              observer.unobserve(el);
-            }
-          });
-        }, { threshold: 0.1 });
-        observer.observe(el);
-      });
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out',
+      once: true
     });
   </script>
 </body>
 </html>
+
